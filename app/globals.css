@@ -3,6 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --muted-foreground: #737373;
+ /* Glass effects */
+ --glass-bg: #FFFFFF;
+  --glass-strong-bg: #FFFFFF;
+  --glass-border: #705c961f;
+
+  /* Glow effects */
+  --glow-violet: #8b5cf640;
+  --glow-cyan: #22d3ee40;
 }
 
 @theme inline {
@@ -10,12 +19,22 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-muted-foreground: var(--muted-foreground);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --muted-foreground: #a1a1aa;
+    /* Glass effects */
+    --glass-bg: #14141f8c;
+    --glass-strong-bg: #0f0f17cc;
+    --glass-border: #ffffff1a;
+
+    /* Glow effects */
+    --glow-violet: #8b5cf673;
+    --glow-cyan: #22d3ee66;
   }
 }
 
@@ -24,3 +43,71 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .font-display {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+
+  .text-gradient {
+    background: linear-gradient(110deg, #a855f7, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glass-strong {
+    background: var(--glass-strong-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glow-violet {
+    box-shadow:
+      0 0 30px var(--glow-violet),
+      0 0 60px var(--glow-violet);
+  }
+
+  .glow-cyan {
+    box-shadow:
+      0 0 30px var(--glow-cyan),
+      0 0 60px var(--glow-cyan);
+  }
+
+  .glow-soft {
+    box-shadow: 0 0 40px var(--glow-violet);
+  }
+
+  .border-gradient {
+    position: relative;
+  }
+
+  .border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      130deg,
+      rgba(168, 85, 247, 0.6),
+      rgba(34, 211, 238, 0.5),
+      transparent 70%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
