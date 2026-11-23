@@ -29,9 +29,7 @@ export function Header() {
           }`}
         >
           <a href="#home" className="group flex items-center gap-2.5">
-            <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet to-cyan text-ink">
-              <span className="absolute inset-0 rounded-xl bg-gradient-to-br from-violet to-cyan blur-md opacity-50 group-hover:opacity-80 transition-opacity" />
-            </span>
+            
             <span className="font-display text-lg font-bold tracking-tight text-foreground">
               Nee<span className="text-gradient">raj</span>
             </span>
@@ -45,7 +43,7 @@ export function Header() {
                 className="group relative rounded-lg px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
                 {l.label}
-                <span className="absolute inset-x-3 -bottom-0.5 h-px scale-x-0 bg-gradient-to-r from-violet-500 to-cyan-300 transition-transform duration-300 group-hover:scale-x-100" />
+                <span className="absolute inset-x-3 -bottom-0.5 h-px scale-x-0 bg-linear-to-r from-violet-500 to-cyan-300 transition-transform duration-300 group-hover:scale-x-100" />
               </a>
             ))}
           </div>
@@ -75,7 +73,7 @@ export function Header() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-4 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
+                className="rounded-lg px-4 py-2.5 text-sm font-medium transition-colors hover:bg-white/5 text-foreground"
               >
                 {l.label}
               </a>
@@ -83,7 +81,7 @@ export function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-1 rounded-lg bg-gradient-to-r from-violet to-cyan px-4 py-2.5 text-center text-sm font-semibold text-ink"
+              className=" mt-1 rounded-lg bg-linear-to-r from-violet-500 to-cyan-300 px-4 py-2.5 text-center text-sm font-semibold"
             >
               Hire Me
             </a>

@@ -1,41 +1,94 @@
+
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
+
+  /* Base colors */
   --background: #ffffff;
   --foreground: #171717;
-  --muted-foreground: #737373;
- /* Glass effects */
- --glass-bg: #FFFFFF;
-  --glass-strong-bg: #FFFFFF;
-  --glass-border: #705c961f;
+  --muted-foreground: #73738a;
+
+  /* Footer */
+  --footer-bg: #faf9ff;
+  --footer-text: #252238;
+  --footer-muted: #77758c;
+  --footer-heading: #211d35;
+  --footer-border: rgba(112, 92, 150, 0.14);
+  --footer-surface: rgba(112, 92, 150, 0.045);
+  --footer-grid: rgba(112, 92, 150, 0.09);
+
+  /* Brand accents */
+  --accent-violet: #8b5cf6;
+  --accent-violet-hover: #7c3aed;
+  --accent-cyan: #0891b2;
+
+  /* Gradient */
+  --gradient-start: #8b5cf6;
+  --gradient-end: #0891b2;
 
   /* Glow effects */
-  --glow-violet: #8b5cf640;
-  --glow-cyan: #22d3ee40;
+  --glow-violet: rgba(139, 92, 246, 0.16);
+  --glow-cyan: rgba(8, 145, 178, 0.13);
+
+  /* Status */
+  --status-color: #06b6d4;
+  --status-glow: rgba(6, 182, 212, 0.65);
+
+  /* Glass effects */
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-strong-bg: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(112, 92, 150, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    /* Base colors */
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --muted-foreground: #a1a1aa;
+
+    /* Footer */
+    --footer-bg: #0a0a0f;
+    --footer-text: #ececf4;
+    --footer-muted: #9a9ab0;
+    --footer-heading: #ffffff;
+    --footer-border: rgba(255, 255, 255, 0.10);
+    --footer-surface: rgba(255, 255, 255, 0.04);
+    --footer-grid: rgba(255, 255, 255, 0.10);
+
+    /* Brand accents */
+    --accent-violet: #8b5cf6;
+    --accent-violet-hover: #a78bfa;
+    --accent-cyan: #22d3ee;
+
+    /* Gradient */
+    --gradient-start: #8b5cf6;
+    --gradient-end: #22d3ee;
+
+    /* Glow effects */
+    --glow-violet: rgba(139, 92, 246, 0.35);
+    --glow-cyan: rgba(34, 211, 238, 0.25);
+
+    /* Status */
+    --status-color: #22d3ee;
+    --status-glow: rgba(34, 211, 238, 0.75);
+
+    /* Glass effects */
+    --glass-bg: rgba(20, 20, 31, 0.55);
+    --glass-strong-bg: rgba(15, 15, 23, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.10);
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --color-muted-foreground: var(--muted-foreground);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --muted-foreground: #a1a1aa;
-    /* Glass effects */
-    --glass-bg: #14141f8c;
-    --glass-strong-bg: #0f0f17cc;
-    --glass-border: #ffffff1a;
-
-    /* Glow effects */
-    --glow-violet: #8b5cf673;
-    --glow-cyan: #22d3ee66;
-  }
 }
 
 body {
@@ -50,7 +103,11 @@ body {
   }
 
   .text-gradient {
-    background: linear-gradient(110deg, #a855f7, #22d3ee);
+    background: linear-gradient(
+      110deg,
+      var(--gradient-start),
+      var(--gradient-end)
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -110,4 +167,3 @@ body {
     pointer-events: none;
   }
 }
-
