@@ -23,3 +23,19 @@ export const socials = [
     path: "M18.2 2.3h3.3l-7.2 8.3 8.5 11.2h-6.7l-5.2-6.8-6 6.8H1.6l7.7-8.8L1.2 2.3H8l4.7 6.2zm-1.2 17.5h1.8L7 4.2H5.1z",
   },
 ];
+
+export const stats = [
+  { value: 2, suffix: "+", label: "Years Experience" },
+  { value: 4, suffix: "+", label: "Projects Completed" },
+  { value: 100, suffix: "%", label: "Passion for Coding" }
+];
+
+export const codeLines: { t: string; c: string }[] = [
+  { t: "const dev = {", c: "text-violet-300" },
+  { t: '  name: "Alex Rivera",', c: "text-white/85" },
+  { t: '  role: "Front-End Engineer",', c: "text-white/85" },
+  { t: '  stack: ["React","GSAP"],', c: "text-white/85" },
+  { t: '  passion: "motion",', c: "text-cyan-300" },
+  { t: "  available: true,", c: "text-emerald-300" },
+  { t: "};", c: "text-violet-300" },
+];
