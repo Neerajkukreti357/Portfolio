@@ -7,22 +7,6 @@ export function Footer() {
   return (
     <footer className="relative isolate overflow-hidden border-t border-(--footer-border) bg-(--footer-bg) text-(--footer-text)">
 
-      {/* Decorative background */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 opacity-30 bg-[linear-gradient(var(--footer-grid)_1px,transparent_1px),linear-gradient(90deg,var(--footer-grid)_1px,transparent_1px)] bg-size-[64px_64px] mask-[radial-gradient(ellipse_at_50%_0%,#000_10%,transparent_70%)]"
-      />
-
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-40 -top-40 -z-10 h-125 w-125 animate-pulse rounded-full bg-[radial-gradient(circle,var(--glow-violet),transparent_65%)] [animation-duration:6s]"
-      />
-
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-40 top-1/3 -z-10 h-105 w-105 animate-pulse rounded-full bg-[radial-gradient(circle,var(--glow-cyan),transparent_65%)] [animation-duration:8s]"
-      />
-
       <div className="mx-auto w-[min(1200px,100%-2.5rem)] pt-20">
 
         {/* Main row */}
@@ -98,7 +82,7 @@ export function Footer() {
               href="mailto:hello@aria.dev"
               className="mt-6 block text-sm text-(--footer-muted) transition-colors hover:text-(--accent-cyan)"
             >
-              hello@aria.dev
+              neeraj.kukreti0002@gmal.com
             </a>
           </div>
         </div>
@@ -106,7 +90,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-(--footer-border) py-6 text-sm text-(--footer-muted) sm:flex-row">
 
-          <p>© 2026 Aria Vance. Designed and built with care.</p>
+          <p>© 2026 Neeraj Kukreti. Crafted with creativity & code.</p>
 
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

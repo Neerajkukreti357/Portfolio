@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { links } from '@/app/constants/appConstants';
-
+import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
+import { links } from "@/app/constants/appConstants";
+import { Button } from "../ui";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -12,24 +12,23 @@ export function Header() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'py-3' : 'py-5'
+        scrolled ? "py-3" : "py-5"
       }`}
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <nav
           className={`flex items-center justify-between rounded-2xl px-4 py-3 transition-all duration-500 ${
-            scrolled ? 'glass-strong glow-soft' : 'border border-transparent'
+            scrolled ? "glass-strong glow-soft" : "border border-transparent"
           }`}
         >
           <a href="#home" className="group flex items-center gap-2.5">
-            
             <span className="font-display text-lg font-bold tracking-tight text-foreground">
               Nee<span className="text-gradient">raj</span>
             </span>
@@ -49,13 +48,17 @@ export function Header() {
           </div>
 
           <div className="flex items-center gap-3">
-            <a
-              href="#contact"
-              className="hidden sm:inline-flex items-center gap-2 rounded-xl border-gradient bg-white/5 px-5 py-2.5 text-sm font-semibold text-foreground glow-violet transition-transform hover:scale-105 active:scale-95"
+            <Button
+              asChild
+              variant="glow"
+              size="sm"
+              className="hidden sm:inline-flex gap-2 rounded-xl px-5 py-2.5 text-sm hover:scale-105 active:scale-95"
             >
-              Hire Me
-              <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse" />
-            </a>
+              <a href="#contact">
+                Hire Me
+                <span className="size-1.5 animate-pulse rounded-full bg-cyan-400" />
+              </a>
+            </Button>
             <button
               onClick={() => setOpen((v) => !v)}
               className="flex h-10 w-10 items-center justify-center rounded-xl glass text-foreground md:hidden"
@@ -78,13 +81,11 @@ export function Header() {
                 {l.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className=" mt-1 rounded-lg bg-linear-to-r from-violet-500 to-cyan-300 px-4 py-2.5 text-center text-sm font-semibold"
-            >
-              Hire Me
-            </a>
+            <Button asChild variant="default" className="mt-1 w-full text-sm">
+              <a href="#contact" onClick={() => setOpen(false)} className="text-white!">
+                Hire Me
+              </a>
+            </Button>
           </div>
         )}
       </div>
