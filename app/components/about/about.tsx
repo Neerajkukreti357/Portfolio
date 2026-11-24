@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useReveal } from "@/app/hooks/useReveal";
@@ -9,41 +10,49 @@ export function About() {
 
   return (
     <section id="about" className="relative">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 py-10">
+      <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
         <div
           ref={ref}
-          className={`reveal ${visible ? "is-visible" : ""} grid gap-14 lg:grid-cols-12 lg:items-center`}
+          className={`reveal ${
+            visible ? "is-visible" : ""
+          } grid gap-14 lg:grid-cols-12 lg:items-center`}
         >
+          {/* Developer workspace */}
           <div className="lg:col-span-5">
             <DevWorkspace />
           </div>
 
+          {/* About content */}
           <div className="lg:col-span-7">
-            <h1 className="text-sm font-semibold uppercase tracking-[0.3em] text-gradient md:text-left text-center">
+            <span className="text-xl md:text-2xl font-semibold uppercase tracking-[0.3em] text-gradient">
               About Me
-            </h1>
-            <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-white sm:text-5xl">
+            </span>
+
+            <h3 className="mt-4 text-center font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl md:text-left">
               Designing & coding{" "}
               <span className="text-gradient">interfaces</span> that feel alive.
-            </h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-white/65">
+            </h3>
+
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
                 {`I'm a Frontend Developer with 2+ years of experience building
-  responsive, user-friendly web and mobile applications. I specialize
-  in React.js, Next.js, and React Native, with a focus on creating
-  reusable UI components and smooth user experiences across platforms.`}
+                responsive, user-friendly web and mobile applications. I
+                specialize in React.js, Next.js, and React Native, with a focus
+                on creating reusable UI components and smooth user experiences
+                across platforms.`}
               </p>
 
               <p>
-                {`My toolkit includes JavaScript, TypeScript, Redux Toolkit, Zustand,
-  Firebase, and REST API integration. I've also worked with real-time
-  communication using WebSockets and data management with tools like
-  TanStack Query and Redux Saga. I enjoy solving complex problems,
-  writing maintainable code, and turning ideas into practical,
-  engaging digital experiences.`}
+                {`My toolkit includes JavaScript, TypeScript, Redux Toolkit,
+                Zustand, Firebase, and REST API integration. I've also worked
+                with real-time communication using WebSockets and data
+                management with tools like TanStack Query and Redux Saga. I
+                enjoy solving complex problems, writing maintainable code, and
+                turning ideas into practical, engaging digital experiences.`}
               </p>
             </div>
 
+            {/* Statistics */}
             <div className="mt-9 grid grid-cols-3 gap-4">
               {stats.map((s) => (
                 <StatItem key={s.label} {...s} start={visible} />

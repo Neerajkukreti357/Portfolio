@@ -60,7 +60,7 @@ export function Hero() {
       <a
         href="#about"
         aria-label="Scroll down"
-        className="absolute bottom-16 left-1/2 h-11 w-6.5 -translate-x-1/2 rounded-[14px] border-[1.5px] border-hero-scroll-border"
+        className="absolute md:bottom-16 bottom-8 left-1/2 h-11 w-6.5 -translate-x-1/2 rounded-[14px] border-[1.5px] border-hero-scroll-border"
       >
         <span className="scroll-dot absolute left-1/2 top-2 h-2 w-1 rounded bg-[#22D3EE]" />
       </a>
