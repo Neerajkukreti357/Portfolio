@@ -19,9 +19,9 @@ export function About() {
           </div>
 
           <div className="lg:col-span-7">
-            <span className="text-sm font-semibold uppercase tracking-[0.3em] text-gradient">
+            <h1 className="text-sm font-semibold uppercase tracking-[0.3em] text-gradient md:text-left text-center">
               About Me
-            </span>
+            </h1>
             <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-white sm:text-5xl">
               Designing & coding{" "}
               <span className="text-gradient">interfaces</span> that feel alive.

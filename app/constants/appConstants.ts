@@ -32,10 +32,10 @@ export const stats = [
 
 export const codeLines: { t: string; c: string }[] = [
   { t: "const dev = {", c: "text-violet-300" },
-  { t: '  name: "Alex Rivera",', c: "text-white/85" },
-  { t: '  role: "Front-End Engineer",', c: "text-white/85" },
-  { t: '  stack: ["React","GSAP"],', c: "text-white/85" },
-  { t: '  passion: "motion",', c: "text-cyan-300" },
+  { t: '  name: "Neeraj Kukreti",', c: "text-white/85" },
+  { t: '  role: "Software Developer",', c: "text-white/85" },
+  { t: '  stack: [MERN Stack,React Native,Next.js],', c: "text-white/85" },
+  { t: '  passion: "problem-solving",', c: "text-cyan-300" },
   { t: "  available: true,", c: "text-emerald-300" },
   { t: "};", c: "text-violet-300" },
 ];

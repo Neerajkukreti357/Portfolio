@@ -10,7 +10,7 @@ export function DevWorkspace({className}:DevWorkspaceProp) {
   return (
     <div className={cn(`relative mx-auto w-full max-w-md`,className)}>
       {/* glow halo */}
-      <div className="absolute -inset-8 rounded-[2.5rem] bg-linear-to-br from-violet/30 via-fuchsia-500/10 to-cyan/30 blur-3xl animate-pulse-glow" />
+      <div className="absolute md:-inset-8 -inset-4 rounded-[2.5rem] bg-linear-to-br from-violet/30 via-fuchsia-500/10 to-cyan/30 blur-3xl animate-pulse-glow" />
 
 
       {/* main editor card */}
@@ -63,8 +63,8 @@ export function DevWorkspace({className}:DevWorkspaceProp) {
       </div>
 
       {/* decorative shapes */}
-      <div className="absolute -right-10 -top-10 h-24 w-24 rounded-2xl border border-violet/30 bg-violet/10 backdrop-blur-sm rotate-12 animate-float-med" />
-      <div className="absolute -bottom-10 -left-10 h-16 w-16 rounded-full border border-cyan/30 bg-cyan/10 animate-float-slow [animation-delay:1.5s]" />
+      <div className="absolute md:-right-10 md:-top-10 -top-5 -right-2 md:h-24 md:w-24 h-10 w-10 rounded-2xl border border-violet/30 bg-violet/10 backdrop-blur-sm rotate-12 animate-float-med" />
+      <div className="absolute md:-bottom-10 md:-left-10 -bottom-4 -left-3 md:h-16 md:w-16 h-8 w-8 rounded-full border border-cyan/30 bg-cyan/10 animate-float-slow [animation-delay:1.5s]" />
       <div className="absolute right-1/4 -bottom-6 h-10 w-10 rounded-lg border border-fuchsia-400/30 bg-fuchsia-500/10 rotate-45 animate-float-fast [animation-delay:0.5s]" />
 
       {/* sparkles */}
