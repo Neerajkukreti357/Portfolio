@@ -11,22 +11,20 @@ export function About() {
   return (
     <section id="about" className="relative">
       <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
+        <span className="text-xl md:text-2xl font-semibold uppercase tracking-[0.3em] text-gradient">
+              About Me
+            </span>
         <div
           ref={ref}
           className={`reveal ${
             visible ? "is-visible" : ""
           } grid gap-14 lg:grid-cols-12 lg:items-center`}
         >
-          {/* Developer workspace */}
-          <div className="lg:col-span-5">
-            <DevWorkspace />
-          </div>
+         
 
           {/* About content */}
+           
           <div className="lg:col-span-7">
-            <span className="text-xl md:text-2xl font-semibold uppercase tracking-[0.3em] text-gradient">
-              About Me
-            </span>
 
             <h3 className="mt-4 text-center font-display text-4xl font-bold leading-tight text-foreground sm:text-5xl md:text-left">
               Designing & coding{" "}
@@ -58,6 +56,11 @@ export function About() {
                 <StatItem key={s.label} {...s} start={visible} />
               ))}
             </div>
+          </div>
+
+           {/* Developer workspace */}
+          <div className="lg:col-span-5">
+            <DevWorkspace />
           </div>
         </div>
       </div>

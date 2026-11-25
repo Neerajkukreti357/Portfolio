@@ -6,9 +6,9 @@ export function Hero() {
       id="home"
       className="relative isolate flex min-h-screen items-center overflow-hidden bg-background pb-24 pt-36 text-foreground"
     >
-      <div className="flex gap-14 justify-center w-full px-5 xl:px-38 ">
+      <div className="flex gap-10 justify-center w-full px-5 xl:px-38 items-center">
         {/* Content */}
-        <div className="relative z-10 mx-auto w-[min(1200px,100%-2.5rem)]">
+        <div className="flex-1 relative z-10 mx-auto w-[min(1200px,100%-2.5rem)]">
           <h1 className="max-w-[12ch] text-[clamp(1.2rem,9.5vw,6.6rem)] font-bold leading-[.95] tracking-[-.045em]">
             <span className="block overflow-hidden">
               <span className="hero-rise block">I build</span>
@@ -52,8 +52,9 @@ export function Hero() {
             </Button>
           </div>
         </div>
-
-        <DevWorkspace className="hidden md:block" />
+        <div className="flex-1">
+          <DevWorkspace className="hidden md:block" />
+        </div>
       </div>
 
       {/* Scroll indicator */}
